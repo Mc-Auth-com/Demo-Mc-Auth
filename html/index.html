@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  ${HTML_HEAD_TOP}
+
+  <title>Demo.Mc-Auth.com</title>
+
+  ${HTML_HEAD_BOTTOM}
+</head>
+
+<body class="d-flex flex-column h-100">
+  ${HTML_HEADER}
+
+  <main style="margin-bottom: 2rem">
+    <div class="container">
+      ?{AuthErr:
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <p><b>Error</b>: ${AUTH_ERR}</p>
+        <p><b>Error-Description</b>: ${AUTH_ERR_DESC}</p>
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      ?:?}
+
+      ?{AuthSuccess:
+      <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <p>Successfully logged in as <b>${Minecraft_Username}</b></p>
+
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      ?:?}
+
+      ?{LoggedIn:
+      <h2>You are logged into this demo application!</h2>
+      <a class="btn btn-primary" href="${BASE_URL}/logout" role="button">Logout</a>
+      ?:
+      <h2>You are <b>not</b> logged into this demo application!</h2>
+      <a class="btn btn-primary" href="${BASE_URL}/login" role="button">Login using Mc-Auth.com</a>
+      ?}
+
+      <br><br>
+
+      <p><b>Username</b>: ${Minecraft_Username}</p>
+      <p><b>UUID</b>: ${Minecraft_UUID}</p>
+
+      <p>
+        <b>Skin</b>:
+        <img src="https://api.sprax2013.de/mojang/skinfile/${Minecraft_UUID}?404=0" alt="Your Minecraft-Skin">
+      </p>
+    </div>
+  </main>
+
+  ${HTML_FOOTER}
+</body>
+
+</html>

@@ -32,12 +32,12 @@ initStorage(() => {
         console.error(
           prefix + ' requires elevated privileges'
         );
-        process.exit(1);
+        return process.exit(1);
       case 'EADDRINUSE':
         console.error(
           prefix + ' is already in use'
         );
-        process.exit(1);
+        return process.exit(1);
       default:
         throw err;
     }

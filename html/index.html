@@ -19,8 +19,8 @@
     <div class="container">
       ?{AuthErr:
       <div class="alert alert-warning alert-dismissible fade show" role="alert">
-        <p><b>Error</b>: ${AUTH_ERR}</p>
-        <p><b>Error-Description</b>: ${AUTH_ERR_DESC}</p>
+        <p><strong>Error</strong>: ${AUTH_ERR}</p>
+        <p><strong>Error-Description</strong>: ${AUTH_ERR_DESC}</p>
 
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -30,7 +30,7 @@
 
       ?{AuthSuccess:
       <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <p>Successfully logged in as <b>${Minecraft_Username}</b></p>
+        <p>Successfully logged in as <strong>${Minecraft_Username}</strong></p>
 
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
@@ -42,17 +42,17 @@
       <h2>You are logged into this demo application!</h2>
       <a class="btn btn-primary" href="${BASE_URL}/logout" role="button">Logout</a>
       ?:
-      <h2>You are <b>not</b> logged into this demo application!</h2>
+      <h2>You are <strong>not</strong> logged into this demo application!</h2>
       <a class="btn btn-primary" href="${BASE_URL}/login" role="button">Login using Mc-Auth.com</a>
       ?}
 
       <br><br>
 
-      <p><b>Username</b>: ${Minecraft_Username}</p>
-      <p><b>UUID</b>: ${Minecraft_UUID}</p>
+      <p><strong>Username</strong>: ${Minecraft_Username}</p>
+      <p><strong>UUID</strong>: ${Minecraft_UUID}</p>
 
       <p>
-        <b>Skin</b>:
+        <strong>Skin</strong>:
         <img src="https://api.sprax2013.de/mojang/skinfile/${Minecraft_UUID}?404=0" alt="Your Minecraft-Skin">
       </p>
     </div>

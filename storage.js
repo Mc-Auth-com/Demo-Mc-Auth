@@ -1,6 +1,6 @@
-const BASE_URL = 'http://localhost:8092',  // lowercase and no trailing '/' !
+const BASE_URL = 'https://demo.mc-auth.com',  // lowercase and no trailing '/' !
   STATIC_CONTENT_URL = 'https://mc-auth.com',
-  MC_AUTH_URL = 'http://localhost:8091',
+  MC_AUTH_URL = 'https://mc-auth.com',
   DOCS_URL = 'https://github.com/Mc-Auth-com/Mc-Auth-Web/wiki';
 
 const HEAD_TOP = (require('fs').readFileSync('./html/_head_top.html', { encoding: 'UTF-8' })),

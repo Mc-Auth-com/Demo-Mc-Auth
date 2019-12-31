@@ -10,7 +10,7 @@ const cfg = require('../storage/config'),
 router.get('/', (req, res, next) => {
   if (!req.query['code']) return res.redirect(Utils.Storage.BASE_URL + `?success=0&error=${req.query['error']}&error_description=${req.query['error_description']}`);
 
-  request('http://localhost:8091/oauth2/token', {
+  request(Utils.Storage.MC_AUTH_URL + '/oauth2/token', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
